@@ -20,15 +20,15 @@ window.fbAsyncInit = function() {
   });
 
   FB.api(
-    "/279618212103376",
+    "/me/groups",
     function (response) {
       if (response && !response.error) {
-        console.log('omfg');
+        console.log(response.data[0]);
       }
       else {
         console.log(response.error);
       }
-    }, accessToken );
+    });
   };
 
   (function(d, s, id){
