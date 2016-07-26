@@ -1,12 +1,3 @@
-$(document).ready(function() {
-  $.ajaxSetup({ cache: true });
-  $.getScript('https://connect.facebook.net/en_US/sdk.js', function(){
-    FB.init({
-      appId: '1348890865125456',
-      version: 'v2.5'
-    });
-  });
-});
 
 window.fbAsyncInit = function() {
   var accessToken;
@@ -24,7 +15,6 @@ window.fbAsyncInit = function() {
       console.log(accessToken);
     }
     else {
-      console.log('oh boy');
       FB.login();
     }
   });
@@ -32,14 +22,13 @@ window.fbAsyncInit = function() {
   FB.api(
     "/279618212103376",
     function (response) {
-      console.log('wtf');
       if (response && !response.error) {
         console.log('omfg');
       }
       else {
         console.log(response.error);
       }
-    });
+    }, accessToken );
   };
 
   (function(d, s, id){
