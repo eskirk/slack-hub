@@ -1,6 +1,7 @@
 
 window.fbAsyncInit = function() {
   var accessToken;
+  console.log('yup');
   FB.init({
     appId      : '1348890865125456',
     xfbml      : true,
@@ -9,6 +10,7 @@ window.fbAsyncInit = function() {
   });
 
   FB.getLoginStatus(function(response) {
+    console.log('fuck');
     if (response.status === 'connected') {
       console.log('Logged in.');
       accessToken = response.authResponse.accessToken;
