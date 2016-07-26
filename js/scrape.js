@@ -22,12 +22,7 @@ window.fbAsyncInit = function() {
   FB.api(
     "/me/groups",
     function (response) {
-      if (response && !response.error) {
-        console.log(response.data[0]);
-      }
-      else {
-        console.log(response.error);
-      }
+      console.log(response);
     });
   };
 
