@@ -78,8 +78,8 @@ body {
   margin: auto;
   margin-top: 40px;
   height: 90vh;
-  width: 80%;
-  max-width: 100%;
+  width: auto;
+  max-width: 90%;
 }
 
 .owl-item {

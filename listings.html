@@ -5,10 +5,6 @@
   <title>Slack Hub</title>
   <!-- JQuery -->
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
-  <!-- Owl Carousel -->
-  <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
-  <link rel="stylesheet" href="owl-carousel/owl.theme.css">
-  <script src="owl-carousel/owl.carousel.js"></script>
   <!-- CSSHake -->
   <link rel="stylesheet" type="text/css" href="http://csshake.surge.sh/csshake.min.css">
   <!-- Bootstrap -->
@@ -17,22 +13,51 @@
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
   <!-- Other Stylesheets -->
   <link rel="stylesheet" type"text/css" href="style.css" />
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+  <script src="js/scrape.js"></script>
 </head>
 <body>
-
   <script>
-  $(document).ready(function(){
-    $("#owl-gallery").owlCarousel({
-      navigation : true, // Show next and prev buttons
-      slideSpeed : 300,
-      paginationSpeed : 400,
-      singleItem : true
+  var auth_token;
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1348890865125456',
+      xfbml      : true,
+      cookie     : true,
+      version    : 'v2.7'
     });
-  });
-  </script>
 
+    FB.getLoginStatus(function(response) {
+      if (response.status === 'connected') {
+        console.log('Logged in.');
+      }
+      else {
+        console.log('oh boy');
+        FB.login();
+      }
+    });
+
+    FB.api(
+      "/279618212103376",
+      function (response) {
+        console.log('wtf');
+        if (response && !response.error) {
+          console.log('omfg');
+        }
+        else {
+          console.log(response.error);
+        }
+      }
+    );
+  };
+
+  (function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "http://connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  </script>
   <div class="container-fluid">
     <div class="row header">
 
@@ -40,10 +65,10 @@
         <img class="logo shake-slow" src="images/slack-hub-horizontal.png" style="width: 350px;"/>
       </div>
       <div class="col-md-2 home menu">
-        <h2 class="menu-text shake-slow"><a href>Home</a></h2>
+        <h2 class="menu-text shake-slow"><a href="index.html">Home</a></h2>
       </div>
       <div class="col-md-2 beta menu">
-        <h2 class="menu-text shake-slow"><a href="index.html">Beta</a></h2>
+        <h2 class="menu-text shake-slow"><a href>Beta</a></h2>
       </div>
       <div class="col-md-2 profile menu">
         <h2 class="menu-text shake-slow"><a href>Profile</a></h2>
@@ -52,17 +77,6 @@
         <h2 class="menu-text shake-slow"><a href="listings.html">Listings</a></h2>
       </div>
 
-    </div>
-
-    <div class="row content">
-      <div id="owl-gallery" class="owl-carousel">
-        <div><img class="owl-image" src="images/welcome-to-slack-hub.png"/></div>
-        <div><img class="owl-image" src="images/falling.jpg"/></div>
-        <div><img class="owl-image" src="images/rig-porn.jpg"/></div>
-        <div><img class="owl-image" src="images/slot.jpg"/></div>
-        <div><img class="owl-image" src="images/sitting.jpg"/></div>
-        <div><img class="owl-image" src="images/chillin.jpg"/></div>
-      </div>
     </div>
 
   </div>
