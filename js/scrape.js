@@ -13,18 +13,17 @@ window.fbAsyncInit = function() {
       console.log('Logged in.');
       accessToken = response.authResponse.accessToken;
       console.log(accessToken);
+      FB.api(
+        "/me/groups",
+        function (response) {
+          console.log(response);
+        });
+      };
     }
     else {
       FB.login();
     }
   });
-
-  FB.api(
-    "/me/groups",
-    function (response) {
-      console.log(response);
-    });
-  };
 
   (function(d, s, id){
     var js, fjs = d.getElementsByTagName(s)[0];
