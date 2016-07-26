@@ -1,25 +1,48 @@
 
 /* Menu Item and Logo Styling */
 .logo {
-  width: 200px;
-  height: 200px;
+  border-radius: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  box-shadow: 0 5px 5px 0 rgba(0,0,0,0.16);
 }
 
 .menu {
-  margin-top: 40px;
-  text-align: center;
+  vertical-align: middle;
+  height: 100px;
+  line-height: 100px;
 }
 
 .header {
   background: #BDBDBD;
+  border: 10px solid #BDBDBD;
+  display: block;
+  box-shadow: 0 5px 5px 1px #E0E0E0;
+}
+
+.content {
+  height: 100%;
+  width: 100%;
 }
 
 a {
-  color: black;
+  color: #616161;
+  line-height: 90px;
 }
 
-.h2 {
-  color:
+a:hover {
+  text-decoration: none;
+  color: #6A1B9A;
+}
+
+.menu-text {
+  color: #616161;
+  font-size: 40px;
+  font-family: orange-juice;
+  width: auto;
 }
 
 .home {
@@ -39,6 +62,43 @@ a {
 }
 
 /* Body Styling */
+body {
 
+}
 
 /* Other Styles */
+@font-face {
+  font-family: 'orange-juice';
+  src: url('fonts/orange-juice.ttf') format('truetype');
+}
+
+/* Owl Gallery */
+#owl-gallery {
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+  height: 90vh;
+  width: 80%;
+  max-width: 100%;
+}
+
+.owl-item {
+  min-width: 500px;
+  position: relative;
+}
+
+.owl-wrapper-outer {
+  box-shadow: grey 0px 5px 10px 0px;
+}
+
+
+/* Image Classes */
+.owl-image {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin: auto;
+  width: 100%;
+  max-width: 1500px;
+  max-height: 1000px;
+}
