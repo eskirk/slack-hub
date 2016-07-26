@@ -9,6 +9,7 @@ $(document).ready(function() {
 });
 
 window.fbAsyncInit = function() {
+  var accessToken;
   FB.init({
     appId      : '1348890865125456',
     xfbml      : true,
@@ -19,7 +20,8 @@ window.fbAsyncInit = function() {
   FB.getLoginStatus(function(response) {
     if (response.status === 'connected') {
       console.log('Logged in.');
-      var accessToken = response.authResponse.accessToken;
+      accessToken = response.authResponse.accessToken;
+      console.log(accessToken);
     }
     else {
       console.log('oh boy');
