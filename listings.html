@@ -4,37 +4,50 @@
 <head>
   <title>Slack Hub</title>
   <!-- JQuery -->
-  <script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'   integrity='sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44='   crossorigin='anonymous'></script>
   <!-- CSSHake -->
-  <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
+  <link rel='stylesheet' type='text/css' href='https://csshake.surge.sh/csshake.min.css'>
   <!-- Bootstrap -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7' crossorigin='anonymous'>
+  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js' integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS' crossorigin='anonymous'></script>
+  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' rel='stylesheet' integrity='sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1' crossorigin='anonymous'>
   <!-- Other Stylesheets -->
-  <link rel="stylesheet" type"text/css" href="style.css" />
-  <script src="js/scrape.js"></script>
+  <link rel='stylesheet' type'text/css' href='css/style.css' />
+  <link type='text/css' rel='stylesheet' href='css/materialize.min.css'  media='screen,projection'/>
+  <!-- Font -->
+  <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet'>
+  <link href='http://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+  <script src='js/scrape.js'></script>
+  <script src='js/create.js'></script>
 </head>
 <body>
-  <div class="container-fluid">
-    <div class="row header">
+  <div class='container-fluid'>
+    <div class='row header'>
 
-      <div class="col-md-4">
-        <img class="logo" src="images/slack-hub-horizontal.png" style="width: 350px;"/>
+      <div class='col-md-4'>
+        <img class='logo' src='images/slack-hub-horizontal.png' style='width: 350px;'/>
       </div>
-      <div class="col-md-2 home menu">
-        <h2 class="menu-text shake-slow"><a href="index.html">Home</a></h2>
+      <div class='col-md-2 home menu'>
+        <h2 class='menu-text shake-slow'><a href='index.html'>Home</a></h2>
       </div>
-      <div class="col-md-2 beta menu">
-        <h2 class="menu-text shake-slow"><a href>Beta</a></h2>
+      <div class='col-md-2 beta menu'>
+        <h2 class='menu-text shake-slow'><a href>Beta</a></h2>
       </div>
-      <div class="col-md-2 profile menu">
-        <h2 class="menu-text shake-slow"><a href>Profile</a></h2>
+      <div class='col-md-2 profile menu'>
+        <h2 class='menu-text shake-slow'><a href>Profile</a></h2>
       </div>
-      <div class="col-md-2 listings menu">
-        <h2 class="menu-text shake-slow"><a href="listings.html">Listings</a></h2>
+      <div class='col-md-2 listings menu'>
+        <h2 class='menu-text shake-slow'><a href='listings.html'>Listings</a></h2>
       </div>
 
+    </div>
+
+    <div class='row card-listings'>
+      <div class='cards'>
+        <script>createCard()</script>
+      </div>
     </div>
 
   </div>
