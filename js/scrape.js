@@ -15,7 +15,7 @@ window.fbAsyncInit = function() {
       accessToken = response.authResponse.accessToken;
       console.log(accessToken);
       FB.api(
-        '/me/posts',
+        '/me', 'GET', {fields: posts.limit(5)},
         function (response) {
           console.log(response);
         });
@@ -24,7 +24,7 @@ window.fbAsyncInit = function() {
         console.log('Already logged in');
         FB.login();
         FB.api(
-          '/me/posts',
+          '/me', 'GET', {fields: posts.limit(5)},
           function (response) {
             console.log(response);
           });
