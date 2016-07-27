@@ -17,7 +17,7 @@ window.fbAsyncInit = function() {
       FB.api(
         '/me/posts',
         function (response) {
-          console.log(response.data[0]);
+          console.log(response);
         });
       }
       else {
@@ -26,7 +26,7 @@ window.fbAsyncInit = function() {
         FB.api(
           '/me/posts',
           function (response) {
-            console.log(response.data[0]);
+            console.log(response);
           });
         }
       });
