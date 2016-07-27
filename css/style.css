@@ -39,7 +39,7 @@ a:hover {
 }
 
 .menu-text {
-  color: #616161;
+  color: #616161 !important;
   font-size: 40px;
   font-family: orange-juice !important;
   width: auto;
