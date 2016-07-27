@@ -17,10 +17,7 @@ window.fbAsyncInit = function() {
       FB.api(
         '/127031727370713', 'GET', {'fields' : 'name,feed.limit(10)'},
         function (response) {
-          console.log(response.data[0]);
-          console.log(response.data);
-          // console.log(fields);
-          // console.log(posts[0]);
+          console.log(response);
         });
       }
       else {
