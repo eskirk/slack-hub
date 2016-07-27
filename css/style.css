@@ -41,7 +41,7 @@ a:hover {
 .menu-text {
   color: #616161;
   font-size: 40px;
-  font-family: orange-juice;
+  font-family: orange-juice !important;
   width: auto;
 }
 
@@ -69,7 +69,7 @@ body {
 /* Other Styles */
 @font-face {
   font-family: 'orange-juice';
-  src: url('fonts/orange-juice.ttf') format('truetype');
+  src: url('../fonts/orange-juice.ttf') format('truetype');
 }
 
 /* Owl Gallery */
