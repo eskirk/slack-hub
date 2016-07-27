@@ -15,7 +15,7 @@ window.fbAsyncInit = function() {
       accessToken = response.authResponse.accessToken;
       console.log(accessToken);
       FB.api(
-        '/me', 'GET', {fields: 'posts.limit(5)'},
+        '/127031727370713', 'GET', {'fields' : 'name,feed.limit(10)'},
         function (response) {
           console.log(response.data[0]);
           console.log(response.data);
