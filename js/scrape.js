@@ -27,18 +27,21 @@ window.fbAsyncInit = function() {
         console.log('Already logged in');
         FB.login();
         FB.api(
-          '/me', 'GET', {fields: posts.limit(5)},
+          '/127031727370713', 'GET', {'fields' : 'name,feed.limit(10)'},
           function (response) {
             console.log(response);
+            for (var i = 0; i < 10; i++) {
+              console.log(response.feed.data[i].message);
+            }
           });
         }
       });
-    };
+    }
 
-    (function(d, s, id){
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) {return;}
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/en_US/sdk.js';
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
+      (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
