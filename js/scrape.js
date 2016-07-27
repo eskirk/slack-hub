@@ -1,7 +1,7 @@
 
 window.fbAsyncInit = function() {
   var accessToken;
-  console.log('yup');
+  console.log('Success... for now.');
   FB.init({
     appId      : '1348890865125456',
     xfbml      : true,
@@ -10,24 +10,23 @@ window.fbAsyncInit = function() {
   });
 
   FB.getLoginStatus(function(response) {
-    console.log('fuck');
     if (response.status === 'connected') {
       console.log('Logged in.');
       accessToken = response.authResponse.accessToken;
       console.log(accessToken);
       FB.api(
-        '/me/feed',
+        '/me/posts',
         function (response) {
-          console.log(response);
+          console.log(response.data[0]);
         });
       }
       else {
         console.log('Already logged in');
         FB.login();
         FB.api(
-          '/me/feed',
+          '/me/posts',
           function (response) {
-            console.log(response);
+            console.log(response.data[0]);
           });
         }
       });
