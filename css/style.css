@@ -23,26 +23,30 @@
   box-shadow: 0 5px 5px 1px #E0E0E0;
 }
 
-.content {
+.bottom {
+  padding: 20px;
+}
+
+.gallery {
   height: 100%;
   width: 100%;
 }
 
-a {
+.menu-item {
   color: #616161;
   line-height: 90px;
 }
 
-a:hover {
-  text-decoration: none;
-  color: #6A1B9A;
+.menu-text {
+  color: #616161;
+  font-size: 40px;
+  font-family: orange-juice;
+  width: auto;
 }
 
-.menu-text {
-  color: #616161 !important;
-  font-size: 40px;
-  font-family: orange-juice !important;
-  width: auto;
+.menu-text:hover {
+  text-decoration: none;
+  color: #6A1B9A;
 }
 
 .home {
@@ -75,6 +79,17 @@ a:hover {
   font-family: 'orange-juice';
   src: url('../fonts/orange-juice.ttf') format('truetype');
 }
+
+/* Cards */
+.card-link {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.listing {
+  width: 400px;
+}
+
 
 /* Owl Gallery */
 #owl-gallery {
