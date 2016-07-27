@@ -16,7 +16,7 @@ window.fbAsyncInit = function() {
       accessToken = response.authResponse.accessToken;
       console.log(accessToken);
       FB.api(
-        '/me/feed', {message: body},
+        '/me/feed',
         function (response) {
           console.log(response);
         });
