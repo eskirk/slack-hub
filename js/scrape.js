@@ -16,10 +16,9 @@ window.fbAsyncInit = function() {
       accessToken = response.authResponse.accessToken;
       console.log(accessToken);
       FB.api(
-        '/me', {fields: 'last_name'},
+        '/me/feed', {message: body},
         function (response) {
           console.log(response);
-          console.log(reponse.error);
         });
       }
       else {
