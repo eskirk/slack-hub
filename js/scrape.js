@@ -18,7 +18,7 @@ window.fbAsyncInit = function() {
         '/127031727370713', 'GET', {'fields' : 'name,feed.limit(10)'},
         function (response) {
           console.log(response);
-          console.log(response.feed.data[0].id);
+          console.log(response.feed.data[0].message);
         });
       }
       else {
