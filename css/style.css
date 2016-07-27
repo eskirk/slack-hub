@@ -62,8 +62,12 @@ a:hover {
 }
 
 /* Body Styling */
-body {
+.container-fluid {
+  padding: 0;
+}
 
+.lower-container {
+  padding: 20px;
 }
 
 /* Other Styles */
