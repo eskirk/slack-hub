@@ -18,6 +18,8 @@ window.fbAsyncInit = function() {
         '/me', 'GET', {fields: 'posts.limit(5)'},
         function (response) {
           console.log(response);
+          console.log(fields);
+          console.log(posts[0]);
         });
       }
       else {
