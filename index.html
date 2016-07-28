@@ -3,35 +3,28 @@
 
 <head>
   <title>Slack Hub</title>
-  <!-- JQuery -->
+  <!-- JS -->
   <script src='https://code.jquery.com/jquery-2.2.4.min.js'   integrity='sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44='   crossorigin='anonymous'></script>
   <script src='js/materialize.min.js'></script>
-  <!-- Owl Carousel -->
-  <link rel='stylesheet' href='owl-carousel/owl.carousel.css'>
-  <link rel='stylesheet' href='owl-carousel/owl.theme.css'>
-  <script src='owl-carousel/owl.carousel.js'></script>
   <!-- CSSHake -->
   <link rel='stylesheet' type='text/css' href='https://csshake.surge.sh/csshake.min.css'>
-  <!-- Bootstrap -->
-  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7' crossorigin='anonymous'>
-  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js' integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS' crossorigin='anonymous'></script>
-  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' rel='stylesheet' integrity='sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1' crossorigin='anonymous'>
   <!-- Other Stylesheets -->
   <link rel='stylesheet' type'text/css' href='css/style.css' />
   <link type='text/css' rel='stylesheet' href='css/materialize.min.css'  media='screen,projection'/>
-
   <!-- Font -->
   <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
   <!--Let browser know website is optimized for mobile-->
   <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
 </head>
+
 <body>
 
   <script>
-  $(document).ready(function () {
-    $('.slider').slider();
-  })
+  $(document).ready(function(){
+      $('.parallax').parallax();
+  });
   </script>
+
 
   <div class='row header'>
     <div class='col s4'>
@@ -51,27 +44,19 @@
     </div>
   </div>
 
-  <div class='row bottom'>
-    <div id='gallery' class="col s4 offset-s1 slider" style="height: auto; width: 50%;">
-      <ul class="slides">
-        <li>
-          <img src="images/welcome-to-slack-hub.png" />
-        </li>
-        <li>
-          <img src="images/falling.jpg" />
-        </li>
-        <li>
-          <img src="images/rig-porn.jpg" />
-        </li>
-        <li>
-          <img src="images/slot.jpg" />
-        </li>
-        <li>
-          <img src="images/sitting.jpg" />
-        </li>
-      </ul>
+  <div class="parallax-container">
+    <div class="parallax"><img src="images/welcome-to-slack-hub-thin.png" style='width: 100%; object-fit: contain'></div>
+  </div>
+  <div class="section middle">
+    <div class="row container">
+      <h2 class='shake-slow'><a class='menu-text'>Slack-Hub</a></h2>
+      <p class="grey-text text-darken-3 lighten-3">Welcome to Slack-Hub! Your single stop for all things slacklining. Check out our listings page for some sweet deals on gear.</p>
     </div>
   </div>
+  <div class="parallax-container">
+    <div class="parallax"><img src="images/sitting-thin.jpg" style='width: 100%; object-fit: contain'></div>
+  </div>
+
 </div>
 </body>
 </html>

@@ -28,9 +28,6 @@ var createListingCard = function(price, listing) {
               <span class='card-title'>` + price + `</span>
               <p>` + listing + `</p>
             </div>
-            <div class='card-action'>
-              <a class='card-link' href="javascript:$(\'.card-holder\').prepend(createCard());">Create another!</a>
-            </div>
           </div>
         </div>
       </div>

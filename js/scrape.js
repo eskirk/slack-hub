@@ -15,10 +15,10 @@ window.fbAsyncInit = function() {
       accessToken = response.authResponse.accessToken;
       console.log(accessToken);
       FB.api(
-        '/279618212103376', 'GET', {'fields' : 'name, feed.limit(20)'},
+        '/279618212103376', 'GET', {'fields' : 'name, feed.limit(30)'},
         function (response) {
           console.log(response);
-          for (var i = 0; i < 20; i++) {
+          for (var i = 0; i < 30; i++) {
             console.log(response.feed.data[i].message);
             if (~response.feed.data[i].message.indexOf('$')) {
               $('.card-holder').prepend(createListingCard(findPrice(response.feed.data[i].message), response.feed.data[i].message));
@@ -30,10 +30,10 @@ window.fbAsyncInit = function() {
         console.log('Logging in...');
         FB.login();
         FB.api(
-          '/279618212103376', 'GET', {'fields' : 'name, feed.limit(20)'},
+          '/279618212103376', 'GET', {'fields' : 'name, feed.limit(30)'},
           function (response) {
             console.log(response);
-            for (var i = 0; i < 20; i++) {
+            for (var i = 0; i < 30; i++) {
               console.log(response.feed.data[i].message);
               $('.card-holder').prepend(createListingCard(findPrice(response.feed.data[i].message), response.feed.data[i].message));
             }
