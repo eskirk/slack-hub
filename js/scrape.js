@@ -24,7 +24,7 @@ window.fbAsyncInit = function() {
               $('.card-holder').prepend(createListingCard(findPrice(response.feed.data[i].message), response.feed.data[i].message));
             }
           }
-          Materialize.showStaggeredList('#card-list-item');
+          showStaggeredList('#card-list-item');
         });
       }
       else {
