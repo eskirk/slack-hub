@@ -20,7 +20,7 @@ window.fbAsyncInit = function() {
           console.log(response);
           for (var i = 0; i < 10; i++) {
             console.log(response.feed.data[i].message);
-            $('.card-holder').prepend(createListingCard(i, response.feed.data[i].message));
+            $('.card-holder').prepend(createListingCard(findPrice(response.feed.data[i].message), response.feed.data[i].message));
           }
         });
       }
@@ -33,7 +33,7 @@ window.fbAsyncInit = function() {
             console.log(response);
             for (var i = 0; i < 10; i++) {
               console.log(response.feed.data[i].message);
-              $('.card-holder').prepend(createListingCard(i, response.feed.data[i].message));
+              $('.card-holder').prepend(createListingCard(findPrice(response.feed.data[i].message), response.feed.data[i].message));
             }
           });
         }
@@ -47,3 +47,16 @@ window.fbAsyncInit = function() {
       js.src = 'https://connect.facebook.net/en_US/sdk.js';
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
+
+var findPrice = function(str) {
+  var price;
+  var index;
+  if (~str.indexOf('$')) {
+    price += index = str.indexOf('$');
+    index++;
+    while (!isNaN(str.charAt(index))) {
+      price += str.chatAt(index++);
+    }
+  }
+  return str;
+};
