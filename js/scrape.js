@@ -24,6 +24,7 @@ window.fbAsyncInit = function() {
               $('.card-holder').prepend(createListingCard(findPrice(response.feed.data[i].message), response.feed.data[i].message));
             }
           }
+          Materialize.showStaggeredList('#card-list-item');
         });
       }
       else {
@@ -53,6 +54,12 @@ window.fbAsyncInit = function() {
     var findPrice = function(str) {
       var price;
       var index;
+      if (~str.indexOf('-')) {
+        index = str.indexOf('-');
+        if (index < str.length) {
+          return str.substring(0, index + 1);
+        }
+      }
       if (~str.indexOf('$')) {
         index = str.indexOf('$');
         price = str.charAt(index++);

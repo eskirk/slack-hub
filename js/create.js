@@ -20,17 +20,19 @@ var createCard = function() {
 
 var createListingCard = function(price, listing) {
   var htmlText = `
-    <div class='card-container'>
-      <div class='row'>
-        <div class='col-md-5'>
-          <div class='card listing blue-grey darken-1'>
-            <div class='card-content white-text'>
-              <span class='card-title'>` + price + `</span>
-              <p>` + listing + `</p>
+    <li id='card-list-item' style='opacity: 0;'>
+      <div class='card-container'>
+        <div class='row'>
+          <div class='col-md-5'>
+            <div class='card listing blue-grey darken-1'>
+              <div class='card-content white-text'>
+                <span class='card-title'>` + price + `</span>
+                <p>` + listing + `</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>`;
+    </li>`;
   return htmlText;
 };
