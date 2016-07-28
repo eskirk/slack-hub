@@ -20,14 +20,15 @@ window.fbAsyncInit = function() {
           console.log(response);
           for (var i = 0; i < 10; i++) {
             console.log(response.feed.data[i].message);
+            createListingCard(i, response.feed.data[i].message);
           }
         });
       }
       else {
-        console.log('Already logged in');
+        console.log('Logging in...');
         FB.login();
         FB.api(
-          '/127031727370713', 'GET', {'fields' : 'name,feed.limit(10)'},
+          '/127031727370713', 'GET', {'fields' : 'name, feed.limit(10)'},
           function (response) {
             console.log(response);
             for (var i = 0; i < 10; i++) {
