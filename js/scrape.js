@@ -48,15 +48,18 @@ window.fbAsyncInit = function() {
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 
-var findPrice = function(str) {
-  var price;
-  var index;
-  if (~str.indexOf('$')) {
-    price += index = str.indexOf('$');
-    index++;
-    while (!isNaN(str.charAt(index))) {
-      price += str.chatAt(index++);
-    }
-  }
-  return str;
-};
+    var findPrice = function(str) {
+      var price;
+      var index;
+      if (~str.indexOf('$')) {
+        price += index = str.indexOf('$');
+        index++;
+        while (!isNaN(str.charAt(index))) {
+          price += str.charAt(index++);
+        }
+        return str;
+      }
+      else {
+        return 'Price unknown';
+      }
+    };
