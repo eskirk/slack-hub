@@ -18,9 +18,11 @@ window.fbAsyncInit = function() {
         '/279618212103376', 'GET', {'fields' : 'name, feed.limit(20)'},
         function (response) {
           console.log(response);
-          for (var i = 0; i < 10; i++) {
+          for (var i = 0; i < 20; i++) {
             console.log(response.feed.data[i].message);
-            $('.card-holder').prepend(createListingCard(findPrice(response.feed.data[i].message), response.feed.data[i].message));
+            if (~resonse.feed.data[i].message.indexOf('$')) {
+              $('.card-holder').prepend(createListingCard(findPrice(response.feed.data[i].message), response.feed.data[i].message));
+            }
           }
         });
       }
@@ -31,7 +33,7 @@ window.fbAsyncInit = function() {
           '/279618212103376', 'GET', {'fields' : 'name, feed.limit(20)'},
           function (response) {
             console.log(response);
-            for (var i = 0; i < 10; i++) {
+            for (var i = 0; i < 20; i++) {
               console.log(response.feed.data[i].message);
               $('.card-holder').prepend(createListingCard(findPrice(response.feed.data[i].message), response.feed.data[i].message));
             }
