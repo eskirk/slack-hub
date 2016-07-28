@@ -15,7 +15,7 @@ window.fbAsyncInit = function() {
       accessToken = response.authResponse.accessToken;
       console.log(accessToken);
       FB.api(
-        '/127031727370713', 'GET', {'fields' : 'name, feed.limit(10)'},
+        '/279618212103376', 'GET', {'fields' : 'name, feed.limit(10)'},
         function (response) {
           console.log(response);
           for (var i = 0; i < 10; i++) {
@@ -28,7 +28,7 @@ window.fbAsyncInit = function() {
         console.log('Logging in...');
         FB.login();
         FB.api(
-          '/127031727370713', 'GET', {'fields' : 'name, feed.limit(10)'},
+          '/279618212103376', 'GET', {'fields' : 'name, feed.limit(10)'},
           function (response) {
             console.log(response);
             for (var i = 0; i < 10; i++) {
