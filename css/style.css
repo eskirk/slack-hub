@@ -27,11 +27,6 @@
   padding: 20px;
 }
 
-.gallery {
-  height: 100%;
-  width: 100%;
-}
-
 .menu-item {
   color: #616161;
   line-height: 90px;
@@ -91,33 +86,12 @@
 }
 
 
-/* Owl Gallery */
-#owl-gallery {
-  display: block;
-  margin: auto;
-  margin-top: 40px;
-  height: 90vh;
-  width: auto;
-  max-width: 1500px;
-}
-
-.owl-item {
-  min-width: 500px;
-  position: relative;
-}
-
-.owl-wrapper-outer {
-  box-shadow: grey 0px 5px 10px 0px;
+/* Gallery */
+#gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
 /* Image Classes */
-.owl-image {
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-  margin: auto;
-  width: 100%;
-  max-width: 1500px;
-  max-height: 1000px;
-}

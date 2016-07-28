@@ -32,6 +32,7 @@ window.fbAsyncInit = function() {
             console.log(response);
             for (var i = 0; i < 10; i++) {
               console.log(response.feed.data[i].message);
+              createListingCard(i, response.feed.data[i].message);
             }
           });
         }

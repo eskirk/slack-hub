@@ -5,6 +5,7 @@
   <title>Slack Hub</title>
   <!-- JQuery -->
   <script src='https://code.jquery.com/jquery-2.2.4.min.js'   integrity='sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44='   crossorigin='anonymous'></script>
+  <script src='js/materialize.min.js'></script>
   <!-- Owl Carousel -->
   <link rel='stylesheet' href='owl-carousel/owl.carousel.css'>
   <link rel='stylesheet' href='owl-carousel/owl.theme.css'>
@@ -16,8 +17,9 @@
   <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js' integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS' crossorigin='anonymous'></script>
   <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' rel='stylesheet' integrity='sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1' crossorigin='anonymous'>
   <!-- Other Stylesheets -->
-  <link type='text/css' rel='stylesheet' href='css/materialize.min.css'  media='screen,projection'/>
   <link rel='stylesheet' type'text/css' href='css/style.css' />
+  <link type='text/css' rel='stylesheet' href='css/materialize.min.css'  media='screen,projection'/>
+
   <!-- Font -->
   <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
   <!--Let browser know website is optimized for mobile-->
@@ -26,13 +28,12 @@
 <body>
 
   <script>
-  $(document).ready(function(){
-    $('.carousel').carousel();
-  });
+  $(document).ready(function () {
+    $('.slider').slider();
+  })
   </script>
 
   <div class='row header'>
-
     <div class='col s4'>
       <img class='logo' src='images/slack-hub-horizontal.png' style='width: 350px;'/>
     </div>
@@ -50,23 +51,27 @@
     </div>
   </div>
 
-  <div class='carousel'>
-    <a class='carousel-item' href='#one!'><img src='images/welcome-to-slack-hub.png'></a>
-    <a class='carousel-item' href='#two!'><img src='http://lorempixel.com/800/400/food/2'></a>
-    <a class='carousel-item' href='#three!'><img src='http://lorempixel.com/800/400/food/3'></a>
-    <a class='carousel-item' href='#four!'><img src='http://lorempixel.com/800/400/food/4'></a>
-
-    <!-- <div class='carousel-item' href='#one!'><img src='images/welcome-to-slack-hub.png'></a>
-    <a class='carousel-item' href='#two'><img src='images/falling.jpg'></a> -->
-    <!-- <div class='carousel-item' src='images/falling.jpg'/></div>
-    <div><img class='carousel-item' src='images/rig-porn.jpg'/></div>
-    <div><img class='carousel-item' src='images/slot.jpg'/></div>
-    <div><img class='carousel-item' src='images/sitting.jpg'/></div>
-    <div><img class='carousel-item' src='images/chillin.jpg'/></div> -->
+  <div class='row bottom'>
+    <div id='gallery' class="col s4 offset-s1 slider" style="height: auto; width: 50%;">
+      <ul class="slides">
+        <li>
+          <img src="images/welcome-to-slack-hub.png" />
+        </li>
+        <li>
+          <img src="images/falling.jpg" />
+        </li>
+        <li>
+          <img src="images/rig-porn.jpg" />
+        </li>
+        <li>
+          <img src="images/slot.jpg" />
+        </li>
+        <li>
+          <img src="images/sitting.jpg" />
+        </li>
+      </ul>
+    </div>
   </div>
-
-
-  <!-- </div> -->
 </div>
 </body>
 </html>
