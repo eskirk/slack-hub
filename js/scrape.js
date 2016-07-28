@@ -57,7 +57,7 @@ window.fbAsyncInit = function() {
         while (!isNaN(str.charAt(index))) {
           price += str.charAt(index++);
         }
-        return str;
+        return price;
       }
       else {
         return 'Price unknown';
