@@ -20,7 +20,7 @@ window.fbAsyncInit = function() {
           console.log(response);
           for (var i = 0; i < 20; i++) {
             console.log(response.feed.data[i].message);
-            if (~resonse.feed.data[i].message.indexOf('$')) {
+            if (~response.feed.data[i].message.indexOf('$')) {
               $('.card-holder').prepend(createListingCard(findPrice(response.feed.data[i].message), response.feed.data[i].message));
             }
           }
