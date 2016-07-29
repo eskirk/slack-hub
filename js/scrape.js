@@ -36,8 +36,11 @@ window.fbAsyncInit = function() {
             console.log(response);
             for (var i = 0; i < 30; i++) {
               console.log(response.feed.data[i].message);
-              $('.card-holder').prepend(createListingCard(findPrice(response.feed.data[i].message), response.feed.data[i].message));
+              if (~response.feed.data[i].message.indexOf('$')) {
+                $('.card-holder').prepend(createListingCard(findPrice(response.feed.data[i].message), response.feed.data[i].message));
+              }
             }
+            Materialize.showStaggeredList('#card-list');
           });
         }
       });
@@ -57,7 +60,7 @@ window.fbAsyncInit = function() {
       if (~str.indexOf('-')) {
         index = str.indexOf('-');
         if (index < str.length) {
-          return str.substring(0, index + 1);
+          return str.substring(0, index);
         }
       }
       if (~str.indexOf('$')) {
