@@ -59,7 +59,7 @@ window.fbAsyncInit = function() {
       var index;
       if (~str.indexOf('-')) {
         index = str.indexOf('-');
-        if (index < str.length) {
+        if (index < str.length / 2) {
           return str.substring(0, index);
         }
       }
